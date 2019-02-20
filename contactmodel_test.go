@@ -1,14 +1,13 @@
 package main
 
 import (
-	"testing"
-
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestKnowValidContactModel_IsValid(t *testing.T) {
 
-	contact := ContactModel{
+	var contact = ContactModel{
 
 		FirstName:             "Jason",
 		LastName:              "Whelehon",
@@ -24,7 +23,6 @@ func TestKnowValidContactModel_IsValid(t *testing.T) {
 		WorkAddressState:      "Missouri",
 		WorkAddressPostalCode: 63011,
 	}
-
 	var validationError string
 	var isValid = contact.IsValid(&validationError)
 
